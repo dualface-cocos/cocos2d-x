@@ -1320,7 +1320,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setStartListener(lua_State* tolua_S)
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setStartListener'", nullptr);
             return 0;
         }
-        cobj->setStartListener(arg0);
+//        cobj->setStartListener(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1378,7 +1378,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setTrackEventListener(lua_State* tolua_
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackEventListener'", nullptr);
             return 0;
         }
-        cobj->setTrackEventListener(arg0, arg1);
+//        cobj->setTrackEventListener(arg0, arg1);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1436,7 +1436,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener(lua_State* tol
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackCompleteListener'", nullptr);
             return 0;
         }
-        cobj->setTrackCompleteListener(arg0, arg1);
+//        cobj->setTrackCompleteListener(arg0, arg1);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1494,7 +1494,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener(lua_State* tolua_
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackStartListener'", nullptr);
             return 0;
         }
-        cobj->setTrackStartListener(arg0, arg1);
+//        cobj->setTrackStartListener(arg0, arg1);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1598,7 +1598,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setCompleteListener(lua_State* tolua_S)
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setCompleteListener'", nullptr);
             return 0;
         }
-        cobj->setCompleteListener(arg0);
+//        cobj->setCompleteListener(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1656,7 +1656,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setTrackEndListener(lua_State* tolua_S)
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setTrackEndListener'", nullptr);
             return 0;
         }
-        cobj->setTrackEndListener(arg0, arg1);
+//        cobj->setTrackEndListener(arg0, arg1);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1710,7 +1710,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setEventListener(lua_State* tolua_S)
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setEventListener'", nullptr);
             return 0;
         }
-        cobj->setEventListener(arg0);
+//        cobj->setEventListener(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }
@@ -1820,7 +1820,7 @@ int lua_cocos2dx_spine_SkeletonAnimation_setEndListener(lua_State* tolua_S)
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_spine_SkeletonAnimation_setEndListener'", nullptr);
             return 0;
         }
-        cobj->setEndListener(arg0);
+//        cobj->setEndListener(arg0);
         lua_settop(tolua_S, 1);
         return 1;
     }

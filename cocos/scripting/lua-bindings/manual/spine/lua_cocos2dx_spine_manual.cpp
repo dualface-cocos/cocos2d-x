@@ -228,37 +228,49 @@ int tolua_Cocos2d_CCSkeletonAnimation_registerSpineEventHandler00(lua_State* tol
         if (NULL != self ) {
             int handler = (  toluafix_ref_function(tolua_S,2,0));
             spEventType eventType = static_cast<spEventType>((int)tolua_tonumber(tolua_S, 3, 0));
-            
+
             switch (eventType) {
                 case spEventType::SP_ANIMATION_START:
                     {
-                        self->setStartListener([=](int trackIndex){
-                            executeSpineEvent(self, handler, eventType, trackIndex);
+                        self->setStartListener( [=] (spTrackEntry* entry) {
+                            executeSpineEvent(self, handler, eventType, entry->trackIndex);
                         });
+//                        self->setStartListener([=](int trackIndex){
+//                            executeSpineEvent(self, handler, eventType, trackIndex);
+//                        });
                         ScriptHandlerMgr::getInstance()->addObjectHandler((void*)self, handler, ScriptHandlerMgr::HandlerType::EVENT_SPINE_ANIMATION_START);
                     }
                     break;
                 case spEventType::SP_ANIMATION_END:
                     {
-                        self->setEndListener([=](int trackIndex){
-                            executeSpineEvent(self, handler, eventType, trackIndex);
+                        self->setEndListener( [=] (spTrackEntry* entry) {
+                            executeSpineEvent(self, handler, eventType, entry->trackIndex);
                         });
+//                        self->setEndListener([=](int trackIndex){
+//                            executeSpineEvent(self, handler, eventType, trackIndex);
+//                        });
                         ScriptHandlerMgr::getInstance()->addObjectHandler((void*)self, handler, ScriptHandlerMgr::HandlerType::EVENT_SPINE_ANIMATION_END);
                     }
                     break;
                 case spEventType::SP_ANIMATION_COMPLETE:
                     {
-                        self->setCompleteListener([=](int trackIndex, int loopCount){
-                            executeSpineEvent(self, handler, eventType, trackIndex, loopCount);
+                        self->setCompleteListener( [=] (spTrackEntry* entry) {
+                            executeSpineEvent(self, handler, eventType, entry->trackIndex);
                         });
+//                        self->setCompleteListener([=](int trackIndex, int loopCount){
+//                            executeSpineEvent(self, handler, eventType, trackIndex, loopCount);
+//                        });
                         ScriptHandlerMgr::getInstance()->addObjectHandler((void*)self, handler, ScriptHandlerMgr::HandlerType::EVENT_SPINE_ANIMATION_COMPLETE);
                     }
                     break;
                 case spEventType::SP_ANIMATION_EVENT:
                     {
-                        self->setEventListener([=](int trackIndex, spEvent* event){
-                            executeSpineEvent(self, handler, eventType, trackIndex, 0, event);
+                        self->setEventListener( [=] (spTrackEntry* entry, spEvent* event) {
+                            executeSpineEvent(self, handler, eventType, entry->trackIndex, 0, event);
                         });
+//                        self->setEventListener([=](int trackIndex, spEvent* event){
+//                            executeSpineEvent(self, handler, eventType, trackIndex, 0, event);
+//                        });
                         ScriptHandlerMgr::getInstance()->addObjectHandler((void*)self, handler, ScriptHandlerMgr::HandlerType::EVENT_SPINE_ANIMATION_EVENT);
                     }
                     break;
