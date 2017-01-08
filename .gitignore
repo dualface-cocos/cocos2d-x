@@ -130,6 +130,9 @@ project.properties
 /external/*
 !/external/config.json
 /templates/lua-template-runtime/runtime
+/templates/lua-template-default/runtime
+/templates/lua-template-default/src/cocos
+/templates/lua-template-default/frameworks/cocos2d-x
 /v*-deps-*.zip
 /v*-lua-runtime-*.zip
 /v*-console-*.zip
